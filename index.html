@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="현장사진대지 개인정보처리방침" />
+  <title>개인정보처리방침 | 현장사진대지</title>
+  <style>
+    :root {
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #64748b;
+      --primary: #1e3a5f;
+      --accent: #f97316;
+      --line: #e2e8f0;
+      --soft: #eef6ff;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+      line-height: 1.75;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(249, 115, 22, 0.12), transparent 32rem),
+        radial-gradient(circle at top right, rgba(30, 58, 95, 0.12), transparent 28rem),
+        var(--bg);
+    }
+
+    .page {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    .hero {
+      padding: 38px 34px;
+      border-radius: 28px;
+      color: #fff;
+      background: linear-gradient(135deg, #1e3a5f 0%, #2563a3 58%, #f97316 140%);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      margin-bottom: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      border-radius: 999px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1.16;
+      letter-spacing: -0.045em;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 17px;
+    }
+
+    .content {
+      margin-top: 26px;
+      padding: 34px;
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    section {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:first-child {
+      padding-top: 0;
+    }
+
+    section:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 22px;
+      line-height: 1.35;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    ul {
+      margin: 12px 0 0;
+      padding: 18px 22px;
+      border-radius: 18px;
+      background: var(--soft);
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .notice {
+      margin-top: 14px;
+      padding: 16px 18px;
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      color: #334155;
+      background: #fff7ed;
+    }
+
+    .footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 22px, 920px);
+        padding: 20px 0;
+      }
+
+      .hero,
+      .content {
+        padding: 24px 20px;
+        border-radius: 22px;
+      }
+
+      section {
+        padding: 22px 0;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow">현장사진대지</div>
+      <h1>개인정보처리방침</h1>
+      <p>현장사진대지는 사용자의 공사 현장 사진과 보고서 데이터를 기기 안에서 처리하는 로컬 우선 앱입니다.</p>
+    </header>
+
+    <article class="content">
+      <section>
+        <h2>1. 수집하는 정보</h2>
+        <p>앱은 MVP 기준으로 서버 계정, 로그인 정보, 위치 정보, 분석 이벤트를 수집하지 않습니다.</p>
+        <p>사용자가 직접 입력하거나 생성하는 데이터는 다음과 같습니다.</p>
+        <ul>
+          <li>현장명</li>
+          <li>현장 주소</li>
+          <li>발주처/고객명</li>
+          <li>업체명</li>
+          <li>담당자명</li>
+          <li>현장사진</li>
+          <li>사진 메모, 공종, 위치, 시공 단계</li>
+          <li>생성된 PDF 보고서</li>
+        </ul>
+        <p>위 데이터는 사용자의 기기 내 로컬 저장소에 저장됩니다.</p>
+      </section>
+
+      <section>
+        <h2>2. 사진 및 파일 처리</h2>
+        <p>사용자가 카메라로 촬영하거나 앨범에서 선택한 사진은 앱 문서 디렉터리로 복사되어 저장됩니다.</p>
+        <p>앱은 임시 사진 경로에 의존하지 않으며, 저장된 파일 경로만 로컬 데이터베이스에 기록합니다.</p>
+        <p>생성된 PDF 보고서는 앱 문서 디렉터리의 보고서 저장 영역에 저장됩니다.</p>
+      </section>
+
+      <section>
+        <h2>3. 권한 사용 목적</h2>
+        <ul>
+          <li>카메라: 현장사진 촬영</li>
+          <li>사진 보관함: 앨범에서 현장사진 선택</li>
+          <li>파일/공유 기능: 생성한 PDF 보고서 공유</li>
+        </ul>
+        <p>권한은 위 기능을 수행하기 위해서만 사용됩니다.</p>
+      </section>
+
+      <section>
+        <h2>4. 외부 전송</h2>
+        <p>MVP 기준으로 앱은 사진, 현장 정보, PDF 보고서를 자체 서버로 업로드하지 않습니다.</p>
+        <div class="notice">사용자가 공유 기능을 직접 실행한 경우에만 선택한 공유 대상 앱으로 PDF 파일이 전달됩니다.</div>
+      </section>
+
+      <section>
+        <h2>5. 결제 정보</h2>
+        <p>Pro 구독 또는 구매 기능은 App Store 또는 Google Play의 결제 시스템을 통해 처리됩니다.</p>
+        <p>앱은 카드번호 등 결제 수단 정보를 직접 수집하거나 저장하지 않습니다.</p>
+      </section>
+
+      <section>
+        <h2>6. 데이터 삭제</h2>
+        <p>사용자는 기기에서 앱을 삭제하여 앱에 저장된 로컬 데이터를 삭제할 수 있습니다.</p>
+        <p>향후 앱 내부 데이터 삭제 기능이 추가될 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>7. 문의</h2>
+        <p>개인정보 관련 문의는 앱 배포자가 제공하는 고객지원 이메일로 연락할 수 있습니다.</p>
+      </section>
+
+      <section>
+        <h2>8. 시행일</h2>
+        <p>2026년 5월 27일</p>
+      </section>
+    </article>
+
+    <p class="footer">© 현장사진대지. All rights reserved.</p>
+  </main>
+</body>
+</html>
