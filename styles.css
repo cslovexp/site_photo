@@ -1,0 +1,420 @@
+:root {
+  --background: #f3f4f6;
+  --surface: #ffffff;
+  --primary: #172033;
+  --accent: #f97316;
+  --secondary: #2563eb;
+  --text: #172033;
+  --muted: #64748b;
+  --border: #e5e7eb;
+  --soft-blue: #eff6ff;
+  --soft-orange: #fff7ed;
+  --max-width: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header,
+footer {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--primary);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.brand img {
+  border-radius: 8px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+nav a {
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--secondary);
+  border-bottom-color: var(--secondary);
+}
+
+.hero {
+  min-height: 470px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: center;
+  gap: 64px;
+  padding: 64px max(20px, calc((100vw - var(--max-width)) / 2));
+  color: #ffffff;
+  background: var(--primary);
+}
+
+.hero-inner {
+  max-width: 680px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--secondary);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.hero .eyebrow {
+  color: #93c5fd;
+}
+
+h1,
+h2,
+h3,
+p {
+  letter-spacing: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(36px, 6vw, 60px);
+  line-height: 1.18;
+}
+
+.hero-copy {
+  max-width: 640px;
+  margin: 22px 0 0;
+  color: #cbd5e1;
+  font-size: 18px;
+}
+
+.hero-logo {
+  width: 220px;
+  height: 220px;
+  border-radius: 32px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.button {
+  min-height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.button.primary {
+  color: #ffffff;
+  background: var(--accent);
+}
+
+.button.secondary {
+  color: #ffffff;
+  border-color: #64748b;
+  background: transparent;
+}
+
+.section,
+.document-page {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: 76px 0 88px;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 28px;
+}
+
+.section h2,
+.document-header h1 {
+  margin: 0;
+  color: var(--primary);
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.3;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.feature,
+.support-action {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.feature {
+  min-height: 220px;
+  padding: 28px;
+}
+
+.feature strong {
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.feature h3 {
+  margin: 32px 0 8px;
+  font-size: 21px;
+}
+
+.feature p,
+.document-header > p:not(.eyebrow),
+.document p {
+  color: var(--muted);
+}
+
+.document-page {
+  padding: 56px 0 88px;
+}
+
+.document-header {
+  max-width: 780px;
+  margin-bottom: 28px;
+}
+
+.document-header > p:not(.eyebrow) {
+  margin: 14px 0 0;
+  font-size: 18px;
+}
+
+.document-header .updated {
+  font-size: 14px;
+}
+
+.document {
+  padding: 12px 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.document section {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.document section:last-child {
+  border-bottom: 0;
+}
+
+.document h2 {
+  margin: 0 0 12px;
+  color: var(--primary);
+  font-size: 22px;
+}
+
+.document p {
+  margin: 8px 0;
+}
+
+.document ul {
+  margin: 14px 0 0;
+  padding: 18px 20px 18px 40px;
+  border-radius: 8px;
+  background: var(--soft-blue);
+}
+
+.document li + li {
+  margin-top: 6px;
+}
+
+.notice {
+  margin-top: 14px;
+  padding: 16px 18px;
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+  color: #9a3412;
+  background: var(--soft-orange);
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+.support-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.support-action {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 22px 24px;
+}
+
+.support-action span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.support-action strong {
+  color: var(--secondary);
+  font-size: 18px;
+}
+
+.faq h2 {
+  font-size: 20px;
+}
+
+footer {
+  min-height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer div {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    min-height: 68px;
+  }
+
+  nav {
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-top: 54px;
+    padding-bottom: 56px;
+  }
+
+  .hero-logo {
+    width: 112px;
+    height: 112px;
+    grid-row: 1;
+    border-radius: 22px;
+  }
+
+  h1 {
+    font-size: 38px;
+  }
+
+  .hero-copy {
+    font-size: 16px;
+  }
+
+  .feature-grid,
+  .support-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 56px 0 64px;
+  }
+
+  .document-page {
+    padding: 40px 0 64px;
+  }
+
+  .document {
+    padding: 4px 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .site-header,
+  footer,
+  .section,
+  .document-page {
+    width: min(100% - 28px, var(--max-width));
+  }
+
+  .brand span {
+    font-size: 17px;
+  }
+
+  nav a:first-child {
+    display: none;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  footer {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+  }
+}
