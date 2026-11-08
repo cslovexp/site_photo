@@ -1,4 +1,4 @@
-import { DeletionApi } from './account-deletion-api.mjs';
+import { DeletionApi } from './account-deletion-api.mjs?v=20261108-2';
 
 const element = id => document.getElementById(id);
 const message = text => { element('message').textContent = text; };

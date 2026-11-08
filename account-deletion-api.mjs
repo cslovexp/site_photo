@@ -1,5 +1,5 @@
 export class DeletionApi {
-  constructor(config, transport = fetch) {
+  constructor(config, transport = (...args) => globalThis.fetch(...args)) {
     const url = new URL(config.url);
     if (url.origin !== 'https://xjlycxgdpiqbgnzwwzsc.supabase.co') throw new Error('config');
     const key = config.publishableKey;
