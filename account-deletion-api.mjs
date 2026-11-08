@@ -10,7 +10,8 @@ export class DeletionApi {
     }
     this.base = url.origin;
     this.key = key;
-    this.transport = transport;
+    // Browser fetch must not receive this API instance as its receiver.
+    this.transport = (...args) => transport(...args);
     this.token = null;
   }
   async call(path, body, token = this.token) {
