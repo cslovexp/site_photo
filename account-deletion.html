@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://xjlycxgdpiqbgnzwwzsc.supabase.co; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>계정·개인정보 삭제 요청 | 현장기록</title>
+  <link rel="stylesheet" href="account-deletion.css">
+  <link rel="icon" href="app-icon.png">
+  <script type="module" src="account-deletion.mjs"></script>
+</head>
+<body>
+  <header><img src="app-icon.png" width="40" height="40" alt=""><strong>현장기록</strong></header>
+  <main>
+    <h1>계정·개인정보 삭제 요청</h1>
+    <p>현장기록 계정으로 본인 확인 후 앱을 설치하지 않고도 삭제를 요청하고 처리 상태를 확인할 수 있습니다.</p>
+    <section aria-labelledby="scope-info">
+      <h2 id="scope-info">삭제 범위와 처리 안내</h2>
+      <ul>
+        <li>현장기록 정보만 삭제하면 다른 CoreWave 서비스 계정은 자동 삭제하지 않습니다.</li>
+        <li>공용 계정 전체 삭제는 Academy 등 다른 서비스에도 영향을 주므로 확인 후 처리합니다.</li>
+        <li>접수 후 7일 이내 처리 결과 또는 보관 대상·근거·기간과 추가 절차를 안내합니다.</li>
+        <li>회사 소유권과 제출 문서·결재 이력은 개별 검토합니다. 일괄 5년 보관이나 즉시 삭제를 약속하지 않습니다.</li>
+        <li>기기의 개인 자료·Pro 구매 권한과 분리되며 기존 스토어 구독은 자동 해지되지 않습니다.</li>
+      </ul>
+    </section>
+    <p id="message" role="status" aria-live="polite">연결 설정을 확인하고 있습니다.</p>
+    <form id="login" hidden>
+      <h2>본인 확인</h2>
+      <label for="email">계정 이메일</label>
+      <input id="email" type="email" autocomplete="username" required maxlength="254">
+      <label for="password">비밀번호</label>
+      <input id="password" type="password" autocomplete="current-password" required>
+      <button type="submit">로그인하고 요청 확인</button>
+      <p class="detail">현장기록에서 사용한 이메일 인증 계정으로 로그인해 주세요. 인증·비밀번호 재설정은 앱에서 진행할 수 있습니다. 비밀번호나 인증번호를 문의 이메일로 보내지 마세요.</p>
+    </form>
+    <section id="account" hidden>
+      <div class="section-heading"><h2>내 삭제 요청</h2><button id="signout" class="secondary">로그아웃</button></div>
+      <p id="request-status"></p>
+      <p id="request-detail"></p>
+      <p id="response"></p>
+      <button id="refresh" class="secondary">처리 상태 새로고침</button>
+      <button id="cancel" class="secondary" hidden>삭제 요청 취소</button>
+      <form id="request" hidden>
+        <fieldset><legend>삭제할 범위</legend>
+          <label class="option"><input type="radio" name="scope" value="site_photo_report" checked>현장기록 계정·개인정보</label>
+          <label class="option"><input type="radio" name="scope" value="corewave">CoreWave 공용 계정 전체</label>
+        </fieldset>
+        <label class="option" id="shared-ack" hidden><input type="checkbox" id="ack">다른 CoreWave 서비스에도 영향이 있음을 확인했습니다.</label>
+        <label for="confirmation">계속하려면 ‘삭제 요청’을 입력해 주세요.</label>
+        <input id="confirmation" autocomplete="off" required>
+        <button type="submit" class="danger">선택한 범위로 삭제 요청</button>
+      </form>
+    </section>
+    <footer>운영: 코어웨이브<br>개인정보 문의: <a href="mailto:cslovexp@gmail.com">cslovexp@gmail.com</a><br>문의 메일 없이도 위 화면에서 요청을 접수할 수 있습니다.</footer>
+  </main>
+</body>
+</html>
